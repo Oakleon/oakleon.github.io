@@ -171,7 +171,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#424242', end
 
 
 .section {
-    padding-bottom: 1em;
+/*    padding-bottom: 1em;*/
     padding-left: 1em;
     padding-right: 1em;
 /*    border: 1px solid black;*/
@@ -219,6 +219,7 @@ h1 {
 
 .namefaceblock {
     color: #eee;
+    position: relative;
 }
 
 .margtop10 {
@@ -246,8 +247,24 @@ h1 {
 }
 
 .contentblock {
+    padding-left: 2em;
+    padding-right: 2em;
+    padding-bottom: 2em;
+}
+
+.testborder {
+    box-sizing:border-box;
+    -moz-box-sizing:border-box;
+      -webkit-box-sizing:border-box;
+    border: 1px solid red;
+}
+
+pre {
+    background-color: #ccc;
     padding-left: 1em;
-    padding-right: 1em;
+    border-left: 3px solid rgb(0,109,194);
+    font-size: 0.8em;
+    color: #333;
 }
 
 
@@ -462,3 +479,41 @@ textarea[contenteditable] {
 
 
 
+
+.namepositionblock {
+    position: relative;
+    top: 0px;
+    left: 15px;
+}
+
+.floater {
+    
+    float: left;
+    clear: left;
+}
+
+.profilename {
+    position: absolute;
+    top: 25px;
+    left: 125px; 
+}
+
+.profileposition
+{
+    position: absolute;
+    top: 55px;
+    left: 125px;  
+}
+
+.title {
+    
+}
+
+.lighttext {
+    color: #eee;
+}
+
+.tagline {
+    color: #eee;
+    font-size: 0.8em;
+}
