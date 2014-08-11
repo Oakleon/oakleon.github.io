@@ -31,7 +31,7 @@
 <!--<![endif]-->
     
     
-    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Syncopate' rel='stylesheet' type='text/css'>
 <!--    <link href='http://fonts.googleapis.com/css?family=Muli' rel='stylesheet' type='text/css'>-->
     <!-- SEO: If mobile URL is different from desktop URL, add a canonical link to the desktop page -->
     <!--
@@ -84,7 +84,7 @@
     <div class="centertext">
         <img class="mainlogo" src="img/oaklion.svg">
         <h1 class="mainoakleon">OAKLEON</h1>
-        <span class="tagline">Distributed version control for structured information</span>
+        <span class="tagline">Version control for information topologies</span>
     </div>
 
 </div>
@@ -101,9 +101,9 @@
         <h1>Evolving Information</h1>
         <p>
             Oakleon is creating a new kind of data architecture.
-            Our system adapts on the fly
-            as information, behaviors, and disruptive models arise. Put another way, 
-            the program changes shape to fit the data instead forcing the data to fit the program.
+            Our system adapts at runtime
+            as information, behaviors, and new models arise. Put another way, 
+            the program changes shape to fit the data instead of forcing the data to fit the program.
             Any kind of record can be forked, merged, committed, and rolled back, 
             like distributed version control for structured data.
             This opens up all kinds of possibilities in areas like 
@@ -135,31 +135,36 @@
 </div> 
 <!--End content block-->
     
+    
+    
+    
+<!--Begin content block-->
+<!--    ****************   --> 
 <div class="dark contentblock">
     
     
     <div class="dark section topspacer">
-        <h1>Our Solution</h1>
+        <h1>Our Solutions</h1>
         <p>    
-            Oakfield is a system of systems designed to solve the problem of storing 
+            <span class="lightbluetext">Project Oakfield</span> is a system of systems designed to solve the problem of storing 
             heterogeneous structured records with near real-time user updates. 
             Oakfield should overcome the need to describe a schema before data 
             curation and entry thereby allowing the users to iterate on the structure over time. 
-            This system uses modern open source data systems as a foundation so individual components can be 
-            updated and modified as new technologies develop without lock-in to a proprietary 
+            This system uses modern open source technologies as a foundation so individual components can be 
+            updated and modified as new systems develop without lock-in to a proprietary 
             vendor. Oakfields core components include a distributed cache,
-            graph database, full-text search, Isotope protocol, and worker cluster.
-
+            graph database, full-text search, Isotope (our custom protocol), and worker cluster.
         </p>
     </div>
-
     
-    <h4 class="section lighttext">Project Oakfield API example</h4>
+    <div class="section">
+        <h4 class="lighttext">Oakfield API example</h4>
+    </div>
     
     <div class="pure-g">
         <div class="pure-u-1 pure-u-md-1-2">
             <div class="section">
-                
+            
 <pre><code>
 // create a record
 r1 = {
@@ -171,8 +176,8 @@ r1 = {
     number:     "196-9665",
     namespace:  "acme001"
 }
-// save it
-Oakfield.commit([r1])
+// commit the record
+Oakfield.<span class="lightbluetext">commit</span>([r1])
 
 </code></pre>
                 
@@ -190,18 +195,53 @@ e1 = {..., type:"vehicle" }
 // some sensor data
 s1 = {..., geo:[32.80, -117.17]}
 
-// Link the records and add some tags
-Oakfield.link(r1, e1, ["assisgned"]);
-
-Oakfield.link(e1, s1, ["tracks"]);
+// Link the records with tags
+Oakfield.<span class="lightbluetext">link</span>(r1, e1, ["uses"]);
+Oakfield.<span class="lightbluetext">link</span>(e1, s1, ["tracks"]);
+Oakfield.<span class="lightbluetext">commit</span>([r1,e1,s1]);
 
 </code></pre>
                 
             </div>
         </div>
     </div>
-</div>
     
+    <div class="pure-g">
+        <div class="pure-u-1 pure-u-md-1-2">
+            <div class="section">
+                
+<pre><code>
+// Modify
+
+</code></pre>
+                
+            </div> 
+        </div>
+        <div class="pure-u-1 pure-u-md-1-2">
+            <div class="section">
+        
+<pre><code>
+// Query
+
+</code></pre>
+                
+            </div>
+        </div>
+    </div>
+    
+    
+    <div class="dark section">
+        <p>    
+            <span class="lightbluetext">Project Canopy</span> is the user interface. 
+            Every element updates dynamically as records and topologies change. 
+            Canopy automates UI generation by generalizing common use patterns for many kinds of applications. 
+            No more building input forms, boilerplating endpoints, or synchronizing state. 
+            This UI builds itself from the data it is asked to represent.
+        </p>
+    </div>
+    
+</div>
+<!--End content block-->
     
 
 
@@ -267,6 +307,45 @@ Oakfield.link(e1, s1, ["tracks"]);
             </div>
         </div>
     </div>
+    
+    
+    <div class="section blue topspacer">
+        <h1>Culture</h1>
+        <p>
+            We’re building a team. Due to previous successes by our founders, we can keep ownership 
+            and decision making inside the company, and we don’t have to answer to investors. 
+            We’re hiring genuine, curious people who care about solving interesting problems.
+        </p>
+        <h4>Hands On</h4>
+        <p>
+            We want our engineers to jump in and get their hands dirty. 
+            We’re looking for people who understand the landscape and problems in 
+            data management well enough to start innovating right when they arrive. 
+            We love experimenting and iterating quickly, so our software stays 
+            cutting edge. 
+            We find that level of problem-solving artful and exciting, and you should too. 
+        </p>
+        <h4>Open</h4>
+        <p>
+            We believe in sharing. We create collaborative hangouts and 
+            dialogs where we can show the technology we make to one another, 
+            because the best solutions evolve out of those conversations. 
+            If we all learn and teach, our product gets smarter faster. 
+            We think a great solution can come together at a barbeque as easily as an online forum.
+            We set aside regular time to learn new languages and paradigms, 
+            we work with open-source, and we open-source our internal projects too. 
+            Openness is built into our work.
+        </p>
+        <h4>Craftsmenship</h4>
+        <p>
+            We believe that process, the craft, is its own reward. 
+            We’re not just here to pump out products-- we’re here to make something great. 
+            We take great pleasure in sharpening our designs.
+            We want our team to be together for a long time, because we’re making a new 
+            foundation to help out global businesses in all kinds of interesting ways. 
+            We want that foundation to be durable.
+        </p>
+    </div>
 </div>
 <!--End content block-->
 
@@ -281,7 +360,7 @@ Oakfield.link(e1, s1, ["tracks"]);
         Oakleon is looking for full-stack javascript developers. 
         Our product is a new kind of data system that will change the way businesses think about building applications. 
         Come join us and help hack on some great technologies including 
-        Firebase, Elasticsearch, Neo4j, Docker, and React. We are also looking for developers with a background 
+        Firebase, Elasticsearch, Neo4j, Docker, React and our own internal projects Oakfield, Canopy and Isotope. We are also looking for developers with a background 
         in machine learning and operational research. Base pay from $75k - $125k depending on experience.
     </p>
         
@@ -324,11 +403,24 @@ Oakfield.link(e1, s1, ["tracks"]);
 <!--Begin content block-->
 <!--    ****************   -->
 <div class="contentblock">
-<div class="section"> 
+<div class="section dark"> 
     <p>6867 Nancy Ridge Dr San Diego, CA 92121</p>
     <p>contact@oakleon.com</p> 
-    <p>© Oakleon, Inc.</p> 
+    <p>© Oakleon, Inc.</p>
+    <div style="text-align:center; padding-top:15px;">
+        <a class="section" href="https://twitter.com/oakleon">
+            <i class="fa fa-twitter fa-inverse fa-2x"></i>
+        </a>
+        <a class="section" href="https://github.com/oakleon">
+            <i class="fa fa-github fa-inverse fa-2x"></i>
+        </a>
+        <a class="section" href="mailto:contact@oakleon.com">
+            <i class="fa fa-send-o fa-inverse fa-2x"></i> 
+        </a>
+         
     
+    </div>
+
 </div>
 </div>
 <!--End content block-->
@@ -336,7 +428,7 @@ Oakfield.link(e1, s1, ["tracks"]);
     
     <!-- Add your site or application content here -->
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
-    <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+    <script src="js/d3.js" charset="utf-8"></script>
     <script src="js/vendor/jquery-2.1.1.min.js"></script>
     <script src="js/helper.js"></script>
     <script src="js/main.js"></script>
@@ -447,12 +539,14 @@ Oakfield.link(e1, s1, ["tracks"]);
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
     <script>
-        (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-        function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-        e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-        e.src='//www.google-analytics.com/analytics.js';
-        r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-        ga('create','UA-XXXXX-X');ga('send','pageview');
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-53704048-1', 'auto');
+      ga('send', 'pageview');
+
     </script>
 </body>
 </html>
