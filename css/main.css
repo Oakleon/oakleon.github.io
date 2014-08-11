@@ -19,7 +19,6 @@ textarea {
 }
 
 body {
-    
     line-height: 1.5;
 }
 
@@ -66,16 +65,20 @@ textarea {
    ========================================================================== */
 
 h1 {
-    font-family: 'Muli', sans-serif;
     padding: 0.5em;
     margin: 0px;
     font-size: 2em;
 /*    border: 1px solid red;*/
 }
 
+h4 {
+    margin: 0px;
+    
+/*    border: 1px solid red;*/
+}
+
 body {
     font-size: 18px;
-    font-family: 'Muli', sans-serif;
     font-weight: lighter;
 }
 
@@ -92,8 +95,6 @@ ul {
     padding-right: 1em;
     text-decoration: none;
     color: #eee;
-    font-family: 'Muli', sans-serif;
-
 }
 
 a:link {
@@ -149,9 +150,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#424242', end
     color: #eee;
 }
 
-
-
-
 .oak-header {
     text-align: right;
     width: 100%;
@@ -169,7 +167,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#424242', end
     background-color: rgb(0,109,194);
 }
 
-
 .section {
 /*    padding-bottom: 1em;*/
     padding-left: 1em;
@@ -184,19 +181,32 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#424242', end
     max-height:300px;
 }
 
-
 .light {
     background: #eee;
     border: 1px solid #eee;
 }
 
-.dark {
+.blue {
     background: rgb(0,109,194);
     border: 1px solid rgb(0,109,194);
 }
 
+.dark {
+    background: #333;
+    border: 1px solid #333;
+}
+
 h1 {
     font-weight: lighter;
+}
+
+.blue > h1 {
+    
+    color:#eee;
+}
+
+.blue > p {
+    color:#eee;
 }
 
 .dark > h1 {
@@ -247,6 +257,7 @@ h1 {
 }
 
 .contentblock {
+    
     padding-left: 2em;
     padding-right: 2em;
     padding-bottom: 2em;
@@ -260,11 +271,49 @@ h1 {
 }
 
 pre {
-    background-color: #ccc;
+    background-color: #444;
     padding-left: 1em;
     border-left: 3px solid rgb(0,109,194);
     font-size: 0.8em;
-    color: #333;
+    color: #eee;
+}
+
+.namepositionblock {
+    position: relative;
+    top: 0px;
+    left: 15px;
+}
+
+.floater {
+    
+    float: left;
+    clear: left;
+}
+
+.profilename {
+    position: absolute;
+    top: 25px;
+    left: 125px; 
+}
+
+.profileposition
+{
+    position: absolute;
+    top: 55px;
+    left: 125px;  
+}
+
+.title {
+    
+}
+
+.lighttext {
+    color: #eee;
+}
+
+.tagline {
+    color: #eee;
+    font-size: 0.8em;
 }
 
 
@@ -480,40 +529,4 @@ textarea[contenteditable] {
 
 
 
-.namepositionblock {
-    position: relative;
-    top: 0px;
-    left: 15px;
-}
 
-.floater {
-    
-    float: left;
-    clear: left;
-}
-
-.profilename {
-    position: absolute;
-    top: 25px;
-    left: 125px; 
-}
-
-.profileposition
-{
-    position: absolute;
-    top: 55px;
-    left: 125px;  
-}
-
-.title {
-    
-}
-
-.lighttext {
-    color: #eee;
-}
-
-.tagline {
-    color: #eee;
-    font-size: 0.8em;
-}
