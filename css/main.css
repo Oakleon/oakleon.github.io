@@ -65,13 +65,18 @@ textarea {
    ========================================================================== */
 
 h1 {
-    padding: 0.5em;
+    padding: 0px;
     margin: 0px;
+    -webkit-margin-before: 0em;
+    -webkit-margin-after: 0em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
     font-size: 2em;
 /*    border: 1px solid red;*/
 }
 
 h4 {
+    padding: 0em;
     margin: 0px;
     
 /*    border: 1px solid red;*/
@@ -146,6 +151,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#424242', end
     color: #eee
 }
 
+.contentblock > h1 {
+/*    padding-top: 1.5em;*/
+}
+
 .pure-menu-heading {
     color: #eee;
 }
@@ -168,9 +177,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#424242', end
 }
 
 .section {
-/*    padding-bottom: 1em;*/
-    padding-left: 1em;
-    padding-right: 1em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    padding-left: 2em;
+    padding-right: 2em;
 /*    border: 1px solid black;*/
 }
 
@@ -257,10 +267,7 @@ h1 {
 }
 
 .contentblock {
-    
-    padding-left: 2em;
-    padding-right: 2em;
-    padding-bottom: 2em;
+
 }
 
 .testborder {
@@ -313,7 +320,15 @@ pre {
 
 .tagline {
     color: #eee;
-    font-size: 0.8em;
+    font-size: 1em;
+}
+
+.mainoakleon {
+    padding: 0.5em;
+}
+
+.topspacer {
+    padding-top: 50px;
 }
 
 
@@ -345,6 +360,10 @@ pre {
     body {
 /*        background-color: rgb(255, 0, 0);*/
         font-size: 14px;
+    }
+    
+    .topspacer {
+        padding-top: 1em;
     }
     
     .toparea {
@@ -384,9 +403,9 @@ pre {
     }
     
     .contentblock {
-    padding-left: 0em;
-    padding-right: 0em;
-}
+        padding-left: 0em;
+        padding-right: 0em;
+    }
 
 
     
@@ -515,6 +534,8 @@ textarea[contenteditable] {
 .clearfix:after {
     clear: both;
 }
+
+
 
 
 

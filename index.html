@@ -19,7 +19,9 @@
     <!-- Tile icon for Win8 (144x144 + tile color) -->
     <meta name="msapplication-TileImage" content="img/touch/apple-touch-icon-144x144-precomposed.png">
     <meta name="msapplication-TileColor" content="#222222">
+    <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/pure-min.css">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
     
     <!--[if lte IE 8]>
     <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/grids-responsive-old-ie-min.css">
@@ -53,7 +55,7 @@
     <script>(function(a,b,c){if(c in b&&b[c]){var d,e=a.location,f=/^(a|html)$/i;a.addEventListener("click",function(a){d=a.target;while(!f.test(d.nodeName))d=d.parentNode;"href"in d&&(d.href.indexOf("http")||~d.href.indexOf(e.host))&&(a.preventDefault(),e.href=d.href)},!1)}})(document,window.navigator,"standalone")</script>
     -->
 
-    <link rel="stylesheet" href="css/normalize.css">
+
     <link rel="stylesheet" href="css/main.css">
     <script src="js/vendor/modernizr-2.8.3.min.js"></script>
 </head>
@@ -81,7 +83,7 @@
 
     <div class="centertext">
         <img class="mainlogo" src="img/oaklion.svg">
-        <h1>OAKLEON</h1>
+        <h1 class="mainoakleon">OAKLEON</h1>
         <span class="tagline">Distributed version control for structured information</span>
     </div>
 
@@ -94,9 +96,9 @@
 <a name="vision"></a>
 <div class="light contentblock">
 <!--            -->
-    <h1>Evolving Information</h1>
-    <div class="section">
-        
+    
+    <div class="section topspacer">
+        <h1>Evolving Information</h1>
         <p>
             Oakleon is creating a new kind of data architecture.
             Our system adapts on the fly
@@ -110,8 +112,9 @@
         </p>
     </div>
     
-    <h1>A solvable problem</h1>
+    
     <div class="section">
+        <h1>An open problem</h1>
         <p>    
             Today there are thousands of business applications for managing information. 
             Everything from customer lists and legal forms to experimental research, 
@@ -134,12 +137,19 @@
     
 <div class="dark contentblock">
     
-    <h1>Our Solution</h1>
-    <div class="dark section">
+    
+    <div class="dark section topspacer">
+        <h1>Our Solution</h1>
         <p>    
-            Project Oakfield
-            
-            Peoject Canopy
+            Oakfield is a system of systems designed to solve the problem of storing 
+            heterogeneous structured records with near real-time user updates. 
+            Oakfield should overcome the need to describe a schema before data 
+            curation and entry thereby allowing the users to iterate on the structure over time. 
+            This system uses modern open source data systems as a foundation so individual components can be 
+            updated and modified as new technologies develop without lock-in to a proprietary 
+            vendor. Oakfields core components include a distributed cache,
+            graph database, full-text search, Isotope protocol, and worker cluster.
+
         </p>
     </div>
 
@@ -198,12 +208,15 @@ Oakfield.link(e1, s1, ["tracks"]);
 <!--Begin content block-->
 <!--    ****************   -->
 <a name="team"></a>
-<div class="blue contentblock"> 
-    <h1>Team</h1>
+<div class="blue contentblock">
+    
+    <div class="section blue  topspacer">
+        <h1>Team</h1>
+    </div>
 
     <div class="pure-g">
         <div class="pure-u-1 pure-u-md-1-2">
-            <div class="profile section ">
+            <div class="profile section">
                 <div class="namefaceblock">
                         
                     <span>
@@ -256,16 +269,14 @@ Oakfield.link(e1, s1, ["tracks"]);
     </div>
 </div>
 <!--End content block-->
-    
-    
-    
 
 <!--Begin content block-->
 <!--    ****************   -->
 <a name="jobs"></a>
 <div class="light contentblock"> 
-<h1>Jobs</h1>
-    <div class="section">  
+
+    <div class="section  topspacer">
+    <h1>Jobs</h1>
     <p>
         Oakleon is looking for full-stack javascript developers. 
         Our product is a new kind of data system that will change the way businesses think about building applications. 
@@ -300,8 +311,10 @@ Oakfield.link(e1, s1, ["tracks"]);
     
 <!--Begin content block-->
 <!--    ****************   -->
-<div> 
+<div class="contentblock">
+<div>
     <div id="map-canvas"/>
+</div>
 </div>
 <!--End content block-->
     
@@ -310,10 +323,13 @@ Oakfield.link(e1, s1, ["tracks"]);
     
 <!--Begin content block-->
 <!--    ****************   -->
-<div class="section light"> 
-
-   <p>© Oakleon, Inc.</p> 
-
+<div class="contentblock">
+<div class="section"> 
+    <p>6867 Nancy Ridge Dr San Diego, CA 92121</p>
+    <p>contact@oakleon.com</p> 
+    <p>© Oakleon, Inc.</p> 
+    
+</div>
 </div>
 <!--End content block-->
     
