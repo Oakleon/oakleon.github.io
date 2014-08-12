@@ -144,9 +144,10 @@
     
     
     <div class="dark section topspacer">
-        <h1>Our Solutions</h1>
+        <h4 class="lighttext">Solutions</h4>
+        <h1><span class="lightbluetext">Project Oakfield</span></h1>
         <p>    
-            <span class="lightbluetext">Project Oakfield</span> is a system of systems designed to solve the problem of storing 
+            A system of systems designed to solve the problem of storing 
             heterogeneous structured records with near real-time user updates. 
             Oakfield should overcome the need to describe a schema before data 
             curation and entry thereby allowing the users to iterate on the structure over time. 
@@ -165,8 +166,7 @@
         <div class="pure-u-1 pure-u-md-1-2">
             <div class="section">
             
-<pre><code>
-// create a record
+<pre class="codeblock"><code>// create a record
 r1 = {
     id:         1,
     dob:        "3/14/1592",
@@ -178,7 +178,6 @@ r1 = {
 }
 // commit the record
 Oakfield.<span class="lightbluetext">commit</span>([r1])
-
 </code></pre>
                 
             </div> 
@@ -186,8 +185,7 @@ Oakfield.<span class="lightbluetext">commit</span>([r1])
         <div class="pure-u-1 pure-u-md-1-2">
             <div class="section">
         
-<pre><code>
-// Link heterogeneous records together
+<pre class="codeblock"><code>// Link heterogeneous records together
 
 // some equipment data
 e1 = {..., type:"vehicle" }
@@ -199,7 +197,6 @@ s1 = {..., geo:[32.80, -117.17]}
 Oakfield.<span class="lightbluetext">link</span>(r1, e1, ["uses"]);
 Oakfield.<span class="lightbluetext">link</span>(e1, s1, ["tracks"]);
 Oakfield.<span class="lightbluetext">commit</span>([r1,e1,s1]);
-
 </code></pre>
                 
             </div>
@@ -210,9 +207,7 @@ Oakfield.<span class="lightbluetext">commit</span>([r1,e1,s1]);
         <div class="pure-u-1 pure-u-md-1-2">
             <div class="section">
                 
-<pre><code>
-// Modify
-
+<pre class="codeblock"><code>// Modify
 </code></pre>
                 
             </div> 
@@ -220,9 +215,7 @@ Oakfield.<span class="lightbluetext">commit</span>([r1,e1,s1]);
         <div class="pure-u-1 pure-u-md-1-2">
             <div class="section">
         
-<pre><code>
-// Query
-
+<pre class="codeblock"><code>// Query
 </code></pre>
                 
             </div>
@@ -231,15 +224,87 @@ Oakfield.<span class="lightbluetext">commit</span>([r1,e1,s1]);
     
     
     <div class="dark section">
+        <h1><span class="lightbluetext">Project Canopy</span></h1>
         <p>    
-            <span class="lightbluetext">Project Canopy</span> is the user interface. 
+            An adaptable user interface. 
             Every element updates dynamically as records and topologies change. 
             Canopy automates UI generation by generalizing common use patterns for many kinds of applications. 
-            No more building input forms, boilerplating endpoints, or synchronizing state. 
+            No building input forms, boilerplate endpoints, or synchronizing state. 
             This UI builds itself from the data it is asked to represent.
         </p>
+    </div> 
+
+    <div class="section">
+        <h4 class="lighttext">Canopy API example</h4>
+    </div>
+        
+    <div class="pure-g">
+        <div class="pure-u-1 pure-u-md-1-2">
+            <div class="section">
+            
+                <div class="codeblock">
+<pre><code>// create list UI structure with a query
+v1 = {
+    viewtype:   "list",
+    querytype:  "graph",
+    p1:         "customer",
+    p2:         "service",
+    p3:         timespan(30,"days"),
+    p4:         now - p3;
+    q: (p1) -&gt; (p2 .date &lt; p4)
+}
+// push the view onto the stack
+Canopy.viewstacks[0].push(v1);
+
+// the UI is updated automatically
+// and the view is kept up to date
+</code></pre> 
+            <img style="height:190px; margin-left: 5em;" src="img/mobile_list_view.svg">
+
+                </div>
+                
+            </div> 
+        </div>
+        <div class="pure-u-1 pure-u-md-1-2">
+            <div class="section">
+        
+                <div class="codeblock">
+<pre><code>// add
+</code></pre> 
+            <img style="height:200px; margin-left: 5em;" src="img/mobile_add_item.svg">
+
+                </div>
+                
+            </div>
+        </div>
     </div>
     
+    <div class="pure-g">
+        <div class="pure-u-1 pure-u-md-1-2">
+            <div class="section">
+            
+                <div class="codeblock">
+<pre><code>// timeline
+</code></pre> 
+            <img style="height:190px; margin-left: 5em;" src="img/mobile_list_view.svg">
+
+                </div>
+                
+            </div> 
+        </div>
+        <div class="pure-u-1 pure-u-md-1-2">
+            <div class="section">
+        
+                <div class="codeblock">
+<pre><code>// map
+</code></pre> 
+            <img style="height:200px; margin-left: 5em;" src="img/mobile_map.svg">
+
+                </div>
+                
+            </div>
+        </div>
+    </div>
 </div>
 <!--End content block-->
     

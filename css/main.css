@@ -287,11 +287,17 @@ h1 {
 }
 
 pre {
+
+}
+
+.codeblock {
+    padding-top: 1em;
+    padding-bottom: 1em;
     background-color: #444;
     padding-left: 1em;
     border-left: 3px solid rgb(0,109,194);
     font-size: 0.8em;
-    color: #eee;
+    color: #eee;   
 }
 
 .namepositionblock {
