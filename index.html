@@ -171,7 +171,7 @@ r1 = {
     id:         1,
     dob:        "3/14/1592",
     type:       "user",
-    name:       "john doe",
+    name:       "Leonhard Euler",
     tags:       ["tech", "manager"]
     number:     "196-9665",
     namespace:  "acme001"
@@ -208,14 +208,26 @@ Oakfield.<span class="lightbluetext">commit</span>([r1,e1,s1]);
             <div class="section">
                 
 <pre class="codeblock"><code>// Modify
+r1 = Oakfiled.query.id(1);
+f1 = {status:"active"};
+Oakfield.append(f1, r1);
+
+// add a field to many records
+records = Oakfiled.query.tag("user");
+f1 = {status:"active"};
+Oakfield.<span class="lightbluetext">append</span>(f1, records);
 </code></pre>
                 
             </div> 
         </div>
         <div class="pure-u-1 pure-u-md-1-2">
-            <div class="section">
+            <div class="section">0
         
 <pre class="codeblock"><code>// Query
+Oakfiled.<span class="lightbluetext">query</span>.tag("user");
+Oakfiled.<span class="lightbluetext">query</span>.geo(33.02, -117.41, 5);
+Oakfiled.<span class="lightbluetext">query</span>.graph("(:user)->(:friends)");
+Oakfiled.<span class="lightbluetext">query</span>.fulltext("euler");
 </code></pre>
                 
             </div>
@@ -258,8 +270,10 @@ Canopy.viewstacks[0].push(v1);
 
 // the UI is updated automatically
 // and the view is kept up to date
-</code></pre> 
-            <img style="height:190px; margin-left: 5em;" src="img/mobile_list_view.svg">
+</code></pre>
+            <div class="aligncenter">
+                <img style="height:190px;" src="img/mobile_list_view.svg"> 
+            </div>
 
                 </div>
                 
@@ -269,10 +283,22 @@ Canopy.viewstacks[0].push(v1);
             <div class="section">
         
                 <div class="codeblock">
-<pre><code>// add
-</code></pre> 
-            <img style="height:200px; margin-left: 5em;" src="img/mobile_add_item.svg">
+<pre><code>// add a field
+r1 = Oakfiled.query.id("14794b5df8f");
+f1 = {status:"active"};
+Oakfield.append(f1, r1);
 
+// add a field to many records
+records = Oakfiled.query.tag("user");
+f1 = {status:"active"};
+Oakfield.append(f1, records);
+
+// every client viewing these records 
+// will be updated
+</code></pre> 
+            <div class="aligncenter">
+                <img style="height:190px;" src="img/mobile_add_item.svg"> 
+            </div>
                 </div>
                 
             </div>
@@ -285,8 +311,21 @@ Canopy.viewstacks[0].push(v1);
             
                 <div class="codeblock">
 <pre><code>// timeline
-</code></pre> 
-            <img style="height:190px; margin-left: 5em;" src="img/mobile_list_view.svg">
+v1 = {
+    viewtype:   "timeline",
+    querytype:  "tag",
+    q: "events"
+}
+
+// push the view onto the stack
+Canopy.viewstacks[0].push(v1);
+
+// the UI is updated automatically
+// and the view is kept up to date
+</code></pre>
+            <div class="aligncenter">
+                <img style="height:190px;" src="img/mobile_list_view.svg"> 
+            </div>
 
                 </div>
                 
@@ -297,8 +336,22 @@ Canopy.viewstacks[0].push(v1);
         
                 <div class="codeblock">
 <pre><code>// map
-</code></pre> 
-            <img style="height:200px; margin-left: 5em;" src="img/mobile_map.svg">
+v1 = {
+    viewtype:   "map",
+    querytype:  "geobox",
+    p1:         [33.0345,-117.8234],
+    p2:         [33.1575,-117.6004],
+    q:          p1,p2
+}
+// push the view onto the stack
+Canopy.viewstacks[0].push(v1);
+
+// the UI is updated automatically
+// and the view is kept up to date
+</code></pre>
+            <div class="aligncenter">
+                <img style="height:190px;" src="img/mobile_map.svg"> 
+            </div>
 
                 </div>
                 

@@ -355,6 +355,15 @@ pre {
     padding-top: 50px;
 }
 
+code {
+/*
+    font-family: 'Source Sans Pro', sans-serif;
+    letter-spacing:1px;
+    font-size: 16px;
+*/
+}
+
+
 
 
 @media (max-height: 900px) {
@@ -575,3 +584,8 @@ textarea[contenteditable] {
 
 
 
+
+
+.aligncenter {
+    text-align: center;
+}
