@@ -88,7 +88,7 @@ h4 {
 }
 
 body {
-    font-size: 24px;
+    font-size: 20px;
     font-weight: lighter;
 }
 
@@ -392,7 +392,7 @@ code {
     /* Style adjustments for viewports that meet the condition */
     body {
 /*        background-color: rgb(255, 0, 0);*/
-        font-size: 18px;
+        font-size: 16px;
     }
     
     .topspacer {
