@@ -88,7 +88,7 @@ h4 {
 }
 
 body {
-    font-size: 18px;
+    font-size: 24px;
     font-weight: lighter;
 }
 
@@ -135,7 +135,7 @@ background: -webkit-gradient(radial, center center, 0px, center center, 100%, co
 background: -webkit-radial-gradient(center, ellipse cover,  #222 0%,#000000 100%); /* Chrome10+,Safari5.1+ */
 background: -o-radial-gradient(center, ellipse cover,  #222 0%,#000000 100%); /* Opera 12+ */
 background: -ms-radial-gradient(center, ellipse cover,  #222 0%,#000000 100%); /* IE10+ */
-background: radial-gradient(ellipse at center,  #424242 0%,#222 100%); /* W3C */
+background: radial-gradient(ellipse at center,  #3b3b3b 0%,#222 100%); /* W3C */
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#424242', endColorstr='#222',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 
 
@@ -392,7 +392,7 @@ code {
     /* Style adjustments for viewports that meet the condition */
     body {
 /*        background-color: rgb(255, 0, 0);*/
-        font-size: 14px;
+        font-size: 18px;
     }
     
     .topspacer {

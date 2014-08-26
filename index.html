@@ -82,9 +82,9 @@
 
 
     <div class="centertext">
-        <img class="mainlogo" src="img/oaklion.svg">
+        <img class="mainlogo" src="img/oakleon_vert_lines-cropped.svg">
         <h1 class="mainoakleon">OAKLEON</h1>
-        <span class="tagline">Version control for information topologies</span>
+        <span class="tagline">adaptable information systems</span>
     </div>
 
 </div>
@@ -100,31 +100,21 @@
     <div class="section topspacer">
         <h1>Evolving Information</h1>
         <p>
-            Oakleon is creating a new kind of data architecture.
-            Our system adapts at runtime
-            as information, behaviors, and new models arise. Put another way, 
-            the program changes shape to fit the data instead of forcing the data to fit the program.
-            Any kind of record can be forked, merged, committed, and rolled back, 
-            like distributed version control for structured data.
-            This opens up all kinds of possibilities in areas like 
-            business operations, resource management, and collaborative investigation.
-            Oakleon is looking for talented developers to push this technology forward.
+            Our system adapts at runtime as new information, behaviors, and models arise, and the program changes shape to fit the data instead of forcing the data to fit the program. Any type of record can be modified in both content and structure to meet changing needs at any time.
         </p>
+
+        <p>
+            Ours is a new kind of data architecture–using an adaptable information management system, we’re opening up new possibilities in areas like business operations, resource management, and collaborative investigation. Oakleon is looking for talented developers to push this technology forward.
+        </p>
+
+
     </div>
     
     
     <div class="section">
         <h1>An open problem</h1>
-        <p>    
-            Today there are thousands of business applications for managing information. 
-            Everything from customer lists and legal forms to experimental research, 
-            each with a slightly different way of doing the most basic tasks. 
-            Yet each of these programs do many of the same things, present forms for 
-            users to fill in, provide query operations, and display results in a report. 
-            Steadily these programs grow in complexity and scope until there is significant 
-            overlap in functionality. This leads to problems with training users on many programs, 
-            double entry, and even a circular dependency of systems. A generalized approach to 
-            gathering, storing, and reporting structured information is needed. 
+        <p>
+            Today there are thousands of business applications for managing information, each of them ineffective for varying reasons. Data management applications often have overlaps in functionality, which can lead to inefficiencies in training, redundancies in data entries, and circular dependencies between systems. A generalized approach to gathering, storing, and reporting structured information is needed, and we are creating it.
         </p>
     </div>
     
@@ -146,15 +136,14 @@
     <div class="dark section topspacer">
         <h4 class="lighttext">Solutions</h4>
         <h1><span class="lightbluetext">Project Oakfield</span></h1>
-        <p>    
-            A system of systems designed to solve the problem of storing 
-            heterogeneous structured records with near real-time user updates. 
-            Oakfield should overcome the need to describe a schema before data 
-            curation and entry thereby allowing the users to iterate on the structure over time. 
-            This system uses modern open source technologies as a foundation so individual components can be 
-            updated and modified as new systems develop without lock-in to a proprietary 
-            vendor. Oakfields core components include a distributed cache,
-            graph database, full-text search, Isotope (our custom protocol), and worker cluster.
+        <p>
+            Designed to solve the problem of storing heterogeneous structured records, Oakfield delivers near real-time user updates, eliminating issues like lost entries, inaccurate data, or redundancies. Because Oakfield is an adaptable database structure, schema descriptions are not required before data curation or entry. Users have the ability to iterate on the structure of the data over time, shifting the data structure to meet the needs of the present.
+        </p>
+        <p>
+            We use open source technologies as our foundation, keeping ties to any proprietary vendors minimal. Individual components will be updated as new systems develop, keeping our solutions agile and constantly expanding in applicability.
+        </p>
+        <p>
+            Oakfield’s core components include a distributed cache, graph database, full-text search, Isotope (our custom protocol), and worker cluster.
         </p>
     </div>
     
@@ -221,7 +210,7 @@ Oakfield.<span class="lightbluetext">append</span>(f1, records);
             </div> 
         </div>
         <div class="pure-u-1 pure-u-md-1-2">
-            <div class="section">0
+            <div class="section">
         
 <pre class="codeblock"><code>// Query
 Oakfiled.<span class="lightbluetext">query</span>.tag("user");
@@ -237,12 +226,8 @@ Oakfiled.<span class="lightbluetext">query</span>.fulltext("euler");
     
     <div class="dark section">
         <h1><span class="lightbluetext">Project Canopy</span></h1>
-        <p>    
-            An adaptable user interface. 
-            Every element updates dynamically as records and topologies change. 
-            Canopy automates UI generation by generalizing common use patterns for many kinds of applications. 
-            No building input forms, boilerplate endpoints, or synchronizing state. 
-            This UI builds itself from the data it is asked to represent.
+        <p>
+            This is our adaptable user interface, capable of automating interface design processes. Each element updates dynamically in response to the data it is asked to present. By using common use patterns for different types of applications, Canopy suits the needs of the task. There’s no building input forms or boilerplate endpoints. This UI builds itself.
         </p>
     </div> 
 
@@ -271,9 +256,9 @@ Canopy.viewstacks[0].push(v1);
 // the UI is updated automatically
 // and the view is kept up to date
 </code></pre>
-            <div class="aligncenter">
-                <img style="height:190px;" src="img/mobile_list_view.svg"> 
-            </div>
+            <!--<div class="aligncenter">-->
+                <!--<img style="height:190px;" src="img/mobile_list_view.svg"> -->
+            <!--</div>-->
 
                 </div>
                 
@@ -296,9 +281,9 @@ Oakfield.append(f1, records);
 // every client viewing these records 
 // will be updated
 </code></pre> 
-            <div class="aligncenter">
-                <img style="height:190px;" src="img/mobile_add_item.svg"> 
-            </div>
+            <!--<div class="aligncenter">-->
+                <!--<img style="height:190px;" src="img/mobile_add_item.svg"> -->
+            <!--</div>-->
                 </div>
                 
             </div>
@@ -314,7 +299,7 @@ Oakfield.append(f1, records);
 v1 = {
     viewtype:   "timeline",
     querytype:  "tag",
-    q: "events"
+    q:          "events"
 }
 
 // push the view onto the stack
@@ -323,9 +308,9 @@ Canopy.viewstacks[0].push(v1);
 // the UI is updated automatically
 // and the view is kept up to date
 </code></pre>
-            <div class="aligncenter">
-                <img style="height:190px;" src="img/mobile_list_view.svg"> 
-            </div>
+            <!--<div class="aligncenter">-->
+                <!--<img style="height:190px;" src="img/mobile_list_view.svg"> -->
+            <!--</div>-->
 
                 </div>
                 
@@ -349,9 +334,9 @@ Canopy.viewstacks[0].push(v1);
 // the UI is updated automatically
 // and the view is kept up to date
 </code></pre>
-            <div class="aligncenter">
-                <img style="height:190px;" src="img/mobile_map.svg"> 
-            </div>
+            <!--<div class="aligncenter">-->
+                <!--<img style="height:190px;" src="img/mobile_map.svg"> -->
+            <!--</div>-->
 
                 </div>
                 
@@ -389,11 +374,7 @@ Canopy.viewstacks[0].push(v1);
 
                 </div>
                 <p>
-                    Tim is leading the engineering effort at Oakleon. 
-                    Before Oakleon he spent six years in the Air Force and ten years in the Intelligence Community heading up analytic, 
-                    operational, and development teams. He has delieved a number of products ranging from web application used for national 
-                    investigations to 3D visualisation software for geospatial analysis. While consulting for the government he pushed for 
-                    more open access to information and expanded use of open source software. Tim holds a B.S. in Applied Mathematics.
+                    Tim is our lead engineer. Before Oakleon he spent six years in the Air Force and ten years in the intelligence community as a leader of analytic, operational, and development teams. His finished products range from web applications used for national investigations to 3D visualisation software for geospatial analysis. As a consultant for the United States government, he advocated for more open access to information and expanded use of open source software. Tim holds a B.S. in Applied Mathematics.
                 </p>
             </div>
 
@@ -415,12 +396,7 @@ Canopy.viewstacks[0].push(v1);
 
                 </div>
                 <p>
-                    Jason leads the business development and marketing for Oakleon. 
-                    Since 1997, he founded 15 pest control companies with 22 branch locations in 8 different states. 
-                    Jason's brands have included Moxie Pest Control, Homefront Pest Control, Joshua's Pest Control, 
-                    and Mayday Pest Control. The companies founded and operated by him have combined value over $60 
-                    million in annual revenue. Prior to pest control ownership, he worked with Eclipse Marketing. 
-                    Jason holds a B.A. in Accounting.
+                    Jason leads the business development and marketing for Oakleon. In less than 20 years, Jason has founded 15 pest control companies with 22 branch locations in 8 different states. With the guidance of his business acumen both past and present, the companies founded and operated by him have combined value over $60 million in annual revenue. Prior to pest control ownership, he worked with Eclipse Marketing. Jason holds a B.A. in Accounting.
                 </p>
             </div>
         </div>
@@ -430,38 +406,19 @@ Canopy.viewstacks[0].push(v1);
     <div class="section blue topspacer">
         <h1>Culture</h1>
         <p>
-            We’re building a team. Due to previous successes by our founders, we can keep ownership 
-            and decision making inside the company, and we don’t have to answer to investors. 
-            We’re hiring genuine, curious people who care about solving interesting problems.
+            Due to previous successes by our founders, Oakleon is founder-owned and decisions are kept inside the company. We don’t have to answer to investors and we’re hiring genuinely curious people who care about solving interesting problems.
         </p>
         <h4>Hands On</h4>
         <p>
-            We want our engineers to jump in and get their hands dirty. 
-            We’re looking for people who understand the landscape and problems in 
-            data management well enough to start innovating right when they arrive. 
-            We love experimenting and iterating quickly, so our software stays 
-            cutting edge. 
-            We find that level of problem-solving artful and exciting, and you should too. 
+            We want our engineers to jump in and engage with the problems we’re looking to solve. This is a position for those with an understanding of the problems in data management. We want you to start innovating the day you arrive. You should love experimenting and iterating quickly, so our software stays on the cutting edge. We find that level of problem-solving artful and exciting, and you should too.
         </p>
         <h4>Open</h4>
         <p>
-            We believe in sharing. We create collaborative hangouts and 
-            dialogs where we can show the technology we make to one another, 
-            because the best solutions evolve out of those conversations. 
-            If we all learn and teach, our product gets smarter faster. 
-            We think a great solution can come together at a barbeque as easily as an online forum.
-            We set aside regular time to learn new languages and paradigms, 
-            we work with open-source, and we open-source our internal projects too. 
-            Openness is built into our work.
+            Having an open dialog about everything from operations to technology is a key factor in how we choose to run the company because the best solutions evolve out of those conversations. If we all learn and teach, our products get smarter, faster. A great solution can come together at a barbeque as easily as an online forum. We set aside regular time to learn new languages and paradigms. We work with open-source, and we have a list of internal project to open-source soon.
         </p>
         <h4>Craftsmenship</h4>
         <p>
-            We believe that process, the craft, is its own reward. 
-            We’re not just here to pump out products-- we’re here to make something great. 
-            We take great pleasure in sharpening our designs.
-            We want our team to be together for a long time, because we’re making a new 
-            foundation to help out global businesses in all kinds of interesting ways. 
-            We want that foundation to be durable.
+            We believe that process, the craft, is its own reward. Because we aren’t beholden to investors, we can make something great. We take pleasure in sharpening our designs. Our plan is to keep our team together for a long time, as our aims are high. We’re creating a new foundation for running businesses, and we want to make a strong foundation for ourselves first.
         </p>
     </div>
 </div>
@@ -475,29 +432,27 @@ Canopy.viewstacks[0].push(v1);
     <div class="section  topspacer">
     <h1>Jobs</h1>
     <p>
-        Oakleon is looking for full-stack javascript developers. 
-        Our product is a new kind of data system that will change the way businesses think about building applications. 
-        Come join us and help hack on some great technologies including 
-        Firebase, Elasticsearch, Neo4j, Docker, React and our own internal projects Oakfield, Canopy and Isotope. We are also looking for developers with a background 
-        in machine learning and operational research. Base pay from $75k - $125k depending on experience.
+        Oakleon is looking for full-stack JavaScript developers. Join us and help hack on some great technologies including Firebase, Elasticsearch, Neo4j, Docker, React– as well as our own internal projects: Oakfield, Canopy, and Isotope. In addition, we’re looking for developers with a background in machine learning and operational research. Depending on experience, developers can expect a base salary in the $75k - $125k range.
+    </p>
+
+    <h4>Some Perks</h4>
+    <p>
+        Flexible work schedule, remote working options, a health care plan that works for you, and untracked vacation. Rewards will based on performance and not arbitrary metrics.
     </p>
         
     <h4>About you</h4>
     <p>
-        You are a positive and curious person who understands that creating software is 
-        less about being tied to a specific technology and more about finding the right 
-        tool for the job (the tools we have choosen chould change in the future!). 
-        You pick up new languages and techniques quickly and spend free time tinkering with 
-        side projects. Take a crash course on git if you do not already use it. 
-        Experience with Javascript, REST APIs and a *nix enviornment is required.
+        You are a positive and curious person. You understand that creating software is less about specific technologies and more about finding the right tool for the job. Our tools change often, and you should be highly adaptable. You learn new languages and techniques quickly, and you spend time on experimental side-projects.
+    </p>
+
+    <h4>Apply</h4>
+    <p>
+        Send a CV or background description to tim@oakleon.com. Include links to a github, linkedin, stackoverflow profile etc... if you have them. Be prepared for a live coding session and online interview with a lengthy discussion about the most challenging problems you have solved.
     </p>
         
-    <h4>Key Skills</h4>
-    <p> 
-        Javascript, Git, Elasticsearch, Neo4j, Graph Databases, Lucene, 
-        Hybrid Mobile apps, Data Visualisation, d3.js, Firebase, Docker, 
-        Devops, Linux, Google Compute Engine, REST APIs, statistics, 
-        Machine Learning, Operational Research
+    <h4>Stack and Skills</h4>
+    <p>
+        (Our use of any particular technology is open for discussion) JavaScript and Node, Git, Elasticsearch, Neo4j, Lucene, D3.js, Firebase, Docker, Linux, Google Compute Engine, statistics, machine learning, operations research
     </p>
         
     </div>
@@ -558,7 +513,7 @@ Canopy.viewstacks[0].push(v1);
         "featureType": "water",
         "stylers": [
             {
-                "color": "#46bcec"
+                "color": "#555555"
             },
             {
                 "visibility": "on"
