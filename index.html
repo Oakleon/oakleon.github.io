@@ -177,12 +177,12 @@ Oakfield.<span class="lightbluetext">commit</span>([r1,e1,s1]);
             <div class="section">
                 
 <pre class="codeblock"><code>// Modify
-r1 = Oakfiled.query.id(1);
+r1 = Oakfield.query.id(1);
 f1 = {status:"active"};
 Oakfield.append(f1, r1);
 
 // add a field to many records
-records = Oakfiled.query.tag("user");
+records = Oakfield.query.tag("user");
 f1 = {status:"active"};
 Oakfield.<span class="lightbluetext">append</span>(f1, records);
 </code></pre>
@@ -193,10 +193,10 @@ Oakfield.<span class="lightbluetext">append</span>(f1, records);
             <div class="section">
         
 <pre class="codeblock"><code>// Query
-Oakfiled.<span class="lightbluetext">query</span>.tag("user");
-Oakfiled.<span class="lightbluetext">query</span>.geo(33.02, -117.41, 5);
-Oakfiled.<span class="lightbluetext">query</span>.graph("(:user)->(:friends)");
-Oakfiled.<span class="lightbluetext">query</span>.fulltext("euler");
+Oakfield.<span class="lightbluetext">query</span>.tag("user");
+Oakfield.<span class="lightbluetext">query</span>.geo(33.02, -117.41, 5);
+Oakfield.<span class="lightbluetext">query</span>.graph("(:user)->(:friends)");
+Oakfield.<span class="lightbluetext">query</span>.fulltext("euler");
 </code></pre>
                 
             </div>
@@ -249,12 +249,12 @@ Canopy.viewstacks[0].push(v1);
         
                 <div class="codeblock">
 <pre><code>// add a field
-r1 = Oakfiled.query.id("14794b5df8f");
+r1 = Oakfield.query.id("14794b5df8f");
 f1 = {status:"active"};
 Oakfield.append(f1, r1);
 
 // add a field to many records
-records = Oakfiled.query.tag("user");
+records = Oakfield.query.tag("user");
 f1 = {status:"active"};
 Oakfield.append(f1, records);
 
