@@ -101,7 +101,7 @@
         <h1>Evolving Information</h1>
 
         <p>
-            Markets and operations are constantly shifting and evolving, the same is true for the data that represents them. This makes deciding how to store and query this information difficult. The solution: make software adapt to fit the data, even as new types and topologies become part of the structure. Oakleon is looking for talented developers to push this technology forward.
+            Business operations are constantly shifting and evolving, the same is true for the data that represents them. This makes deciding how to store, display and query this information difficult. The solution: make software adapt to fit the data, even as new types and topologies become part of the structure. Oakleon is looking for talented developers to push this technology forward.
         </p>
 
 
@@ -127,82 +127,6 @@
         </p>
     </div>
     
-    <div class="section">
-        <h4 class="lighttext">Oakfield API example</h4>
-    </div>
-    
-    <div class="pure-g">
-        <div class="pure-u-1 pure-u-md-1-2">
-            <div class="section">
-            
-<pre class="codeblock"><code>// create a record
-r1 = {
-    id:         1,
-    dob:        "3/14/1592",
-    type:       "user",
-    name:       "Leonhard Euler",
-    tags:       ["tech", "manager"]
-    number:     "196-9665",
-    namespace:  "acme001"
-}
-// commit the record
-Oakfield.<span class="lightbluetext">commit</span>([r1])
-</code></pre>
-                
-            </div> 
-        </div>
-        <div class="pure-u-1 pure-u-md-1-2">
-            <div class="section">
-        
-<pre class="codeblock"><code>// Link heterogeneous records together
-
-// some equipment data
-e1 = {..., type:"vehicle" }
-
-// some sensor data
-s1 = {..., geo:[32.80, -117.17]}
-
-// Link the records with tags
-Oakfield.<span class="lightbluetext">link</span>(r1, e1, ["uses"]);
-Oakfield.<span class="lightbluetext">link</span>(e1, s1, ["tracks"]);
-Oakfield.<span class="lightbluetext">commit</span>([r1,e1,s1]);
-</code></pre>
-                
-            </div>
-        </div>
-    </div>
-    
-    <div class="pure-g">
-        <div class="pure-u-1 pure-u-md-1-2">
-            <div class="section">
-                
-<pre class="codeblock"><code>// Modify
-r1 = Oakfield.query.id(1);
-f1 = {status:"active"};
-Oakfield.append(f1, r1);
-
-// add a field to many records
-records = Oakfield.query.tag("user");
-f1 = {status:"active"};
-Oakfield.<span class="lightbluetext">append</span>(f1, records);
-</code></pre>
-                
-            </div> 
-        </div>
-        <div class="pure-u-1 pure-u-md-1-2">
-            <div class="section">
-        
-<pre class="codeblock"><code>// Query
-Oakfield.<span class="lightbluetext">query</span>.tag("user");
-Oakfield.<span class="lightbluetext">query</span>.geo(33.02, -117.41, 5);
-Oakfield.<span class="lightbluetext">query</span>.graph("(:user)->(:friends)");
-Oakfield.<span class="lightbluetext">query</span>.fulltext("euler");
-</code></pre>
-                
-            </div>
-        </div>
-    </div>
-    
     
     <div class="dark section">
         <h1><span class="lightbluetext">Project Canopy</span></h1>
@@ -211,118 +135,6 @@ Oakfield.<span class="lightbluetext">query</span>.fulltext("euler");
         </p>
     </div> 
 
-    <div class="section">
-        <h4 class="lighttext">Canopy API example</h4>
-    </div>
-        
-    <div class="pure-g">
-        <div class="pure-u-1 pure-u-md-1-2">
-            <div class="section">
-            
-                <div class="codeblock">
-<pre><code>// create list UI structure with a query
-v1 = {
-    viewtype:   "list",
-    querytype:  "graph",
-    p1:         "customer",
-    p2:         "service",
-    p3:         timespan(30,"days"),
-    p4:         now - p3;
-    q: (p1) -&gt; (p2 .date &lt; p4)
-}
-// push the view onto the stack
-Canopy.viewstacks[0].push(v1);
-
-// the UI is updated automatically
-// and the view is kept up to date
-</code></pre>
-            <!--<div class="aligncenter">-->
-                <!--<img style="height:190px;" src="img/mobile_list_view.svg"> -->
-            <!--</div>-->
-
-                </div>
-                
-            </div> 
-        </div>
-        <div class="pure-u-1 pure-u-md-1-2">
-            <div class="section">
-        
-                <div class="codeblock">
-<pre><code>// add a field
-r1 = Oakfield.query.id("14794b5df8f");
-f1 = {status:"active"};
-Oakfield.append(f1, r1);
-
-// add a field to many records
-records = Oakfield.query.tag("user");
-f1 = {status:"active"};
-Oakfield.append(f1, records);
-
-// every client viewing these records 
-// will be updated
-</code></pre> 
-            <!--<div class="aligncenter">-->
-                <!--<img style="height:190px;" src="img/mobile_add_item.svg"> -->
-            <!--</div>-->
-                </div>
-                
-            </div>
-        </div>
-    </div>
-    
-    <div class="pure-g">
-        <div class="pure-u-1 pure-u-md-1-2">
-            <div class="section">
-            
-                <div class="codeblock">
-<pre><code>// timeline
-v1 = {
-    viewtype:   "timeline",
-    querytype:  "tag",
-    q:          "events"
-}
-
-// push the view onto the stack
-Canopy.viewstacks[0].push(v1);
-
-// the UI is updated automatically
-// and the view is kept up to date
-</code></pre>
-            <!--<div class="aligncenter">-->
-                <!--<img style="height:190px;" src="img/mobile_list_view.svg"> -->
-            <!--</div>-->
-
-                </div>
-                
-            </div> 
-        </div>
-        <div class="pure-u-1 pure-u-md-1-2">
-            <div class="section">
-        
-                <div class="codeblock">
-<pre><code>// map
-v1 = {
-    viewtype:   "map",
-    querytype:  "geobox",
-    p1:         [33.0345,-117.8234],
-    p2:         [33.1575,-117.6004],
-    q:          p1,p2
-}
-// push the view onto the stack
-Canopy.viewstacks[0].push(v1);
-
-// the UI is updated automatically
-// and the view is kept up to date
-</code></pre>
-            <!--<div class="aligncenter">-->
-                <!--<img style="height:190px;" src="img/mobile_map.svg"> -->
-            <!--</div>-->
-
-                </div>
-                
-            </div>
-        </div>
-    </div>
 </div>
 <!--End content block-->
     
@@ -461,7 +273,7 @@ Canopy.viewstacks[0].push(v1);
 
     <h4>Apply</h4>
     <p>
-        Send a CV or background description to contact@oakleon.com. Include links to a github, 
+        Take a look at this <a style="color:blue;" href="https://docs.google.com/a/oakleon.com/document/d/1-OTJdWcsmtQnj2nDxKr1XfFgJSrq45UfDKqrXw0OmFg/edit?usp=sharing">Document</a> and send your response to jobs@oakleon.com. Include links to a github, 
         linkedin, stackoverflow profile etc... Be prepared for a live coding 
         session and online interview with a lengthy discussion about the most challenging problems you have solved.
     </p>
@@ -494,7 +306,7 @@ Canopy.viewstacks[0].push(v1);
 <div class="contentblock">
 <div class="section dark"> 
     <p>6867 Nancy Ridge Dr San Diego, CA 92121</p>
-    <p>contact@oakleon.com</p> 
+    <p>jobs@oakleon.com</p> 
     <p>© Oakleon, Inc.</p>
     <div style="text-align:center; padding-top:15px;">
         <a class="section" href="https://twitter.com/oakleon">
@@ -503,7 +315,7 @@ Canopy.viewstacks[0].push(v1);
         <a class="section" href="https://github.com/oakleon">
             <i class="fa fa-github fa-inverse fa-2x"></i>
         </a>
-        <a class="section" href="mailto:contact@oakleon.com">
+        <a class="section" href="mailto:jobs@oakleon.com">
             <i class="fa fa-send-o fa-inverse fa-2x"></i> 
         </a>
          
